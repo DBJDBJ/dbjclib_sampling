@@ -1,0 +1,3 @@
+[submodule "dbjclib"]
+	path = dbjclib
+	url = https://github.com/dbj-systems/dbjclib.git
