@@ -40,6 +40,6 @@ UTEST(dbjclib, dbj_valstat_test)
 	valstat_uint64_t rez2 = divider(4, 0);
 
 	ASSERT_TRUE(is_valstat_error(rez2));
-	EXPECT_FALSE(rez2.stat);
+	ASSERT_TRUE(rez2.stat);
 	UBUT_TRACE("%s", rez2.stat);
 }

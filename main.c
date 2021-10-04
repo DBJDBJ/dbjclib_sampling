@@ -1,10 +1,10 @@
 #define UTEST_IMPLEMENTATION
 #include "ubut/utest.h"
 
-#define DBJ_CHAR_RANGE_IMPLEMENTATION 1
+#define DBJ_CHAR_RANGE_IMPLEMENTATION
 #include "dbjclib/dbj_chr_rng/dbj_chr_rng.h"
 
-// note there is no ()! 
+// note: there is no ()! 
 UTEST_STATE;
 
 int main(int argc, const char* const argv[])

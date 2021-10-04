@@ -20,11 +20,11 @@ UTEST(core_tests, dbj_char_range)
 
 	EXPECT_FALSE(dbj_chr_rng_compare(&dbjs_1, &dbjs_2));
 
-	dbj_chr_rng dbjs_3 = dbj_remove_substring(&dbjs_2, &dbjs_1);
+	// TODO! dbj_chr_rng dbjs_3 = dbj_remove_substring(&dbjs_2, &dbjs_1);
 
 	dbj_chr_rng_free(&dbjs_1);
 	dbj_chr_rng_free(&dbjs_2);
-	dbj_chr_rng_free(&dbjs_3);
+	// dbj_chr_rng_free(&dbjs_3);
 }
 /* ----------------------------------------------------------------------- */
 UTEST(core_tests, dbj_char_string_view_range)
