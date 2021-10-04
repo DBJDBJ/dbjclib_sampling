@@ -1,7 +1,7 @@
 .vs/
 Debug/
 Relase/
-/x64
+x64/
 *.filters
 *.user
 *.obj
