@@ -27,7 +27,7 @@
     <ClCompile Include="dbj_string_trim_test.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="munit_playground.c">
+    <ClCompile Include="playground.c">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="valstat_sample_and_test.c">

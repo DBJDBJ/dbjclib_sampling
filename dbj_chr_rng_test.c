@@ -33,25 +33,23 @@ UTEST(core_tests, dbj_char_string_view_range)
 	// remember: no memory is allocated for the strings viewed
 	// thus be carefull to keep them arround
 
-	EXPECT_TRUE(3 == dbj_sv_len(dbj_sv_make(SPECIMEN, 1, 3)));
+	EXPECT_TRUE(3 == dbj_chr_rng_len(make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3)));
 
 	EXPECT_TRUE(
-		dbj_sv_compare(
-			dbj_sv_make(SPECIMEN, 1, 3), dbj_sv_make(SPECIMEN, 1, 3)));
+		dbj_chr_rng_compare(
+			make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3), make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3)));
 
 	EXPECT_FALSE(
-		dbj_sv_compare(
-			dbj_sv_make(SPECIMEN, 1, 3), dbj_sv_make(SPECIMEN, 4, 6)));
+		dbj_chr_rng_compare(
+			make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3), make_chr_rng_one_ptr_two_markes(SPECIMEN, 4, 6)));
 
 	EXPECT_STRNE(
-		dbj_sv_make(SPECIMEN, 1, 3)->front,
-		dbj_sv_make(SPECIMEN, 4, 6)->front);
+		make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3)->front,
+		make_chr_rng_one_ptr_two_markes(SPECIMEN, 4, 6)->front);
 
 	EXPECT_STREQ(
-		dbj_sv_make(SPECIMEN, 1, 3)->front,
-		dbj_sv_make(SPECIMEN, 1, 3)->front);
-
-
+		make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3)->front,
+		make_chr_rng_one_ptr_two_markes(SPECIMEN, 1, 3)->front);
 }
 
 #undef SPECIMEN

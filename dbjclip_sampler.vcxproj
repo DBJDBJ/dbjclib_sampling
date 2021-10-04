@@ -117,7 +117,7 @@
     <ClCompile Include="dbj_string_list_test.c" />
     <ClCompile Include="dbj_string_trim_test.c" />
     <ClCompile Include="main.c" />
-    <ClCompile Include="munit_playground.c" />
+    <ClCompile Include="playground.c" />
     <ClCompile Include="valstat_sample_and_test.c" />
   </ItemGroup>
   <ItemGroup>
