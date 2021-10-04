@@ -1,4 +1,5 @@
 #include "dbjclib/dbj_str_trim/dbj_string_trim.h"
+#include "dbjclib/dbjclib_core.h"
 #include "ubut/utest.h"
 
 // DBJ proposal :

@@ -1,5 +1,5 @@
 
-#define DBJ_CHAR_RANGE_IMPLEMENTATION 1
+// in main.c: #define DBJ_CHAR_RANGE_IMPLEMENTATION 1
 #include "dbjclib/dbj_chr_rng/dbj_chr_rng.h"
 
 #include "ubut/utest.h"

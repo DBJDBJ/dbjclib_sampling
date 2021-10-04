@@ -1,4 +1,28 @@
-﻿lld-link : error : undefined symbol: dbj_chr_rng_assign
+﻿dbj_string_trim_test.c(168,2): warning : data argument not used by format string [-Wformat-extra-args]
+./ubut/utest.h(257,25): message : expanded from macro 'EXPECT_EQ'
+./ubut/utest.h(220,4): message : expanded from macro 'UTEST_EXPECT'
+./ubut/utest.h(164,7): message : expanded from macro 'utest_type_printer'
+./ubut/utest.h(63,30): message : expanded from macro 'UTEST_REZ_OUT'
+dbj_string_trim_test.c(168,2): warning : data argument not used by format string [-Wformat-extra-args]
+./ubut/utest.h(257,25): message : expanded from macro 'EXPECT_EQ'
+./ubut/utest.h(220,4): message : expanded from macro 'UTEST_EXPECT'
+./ubut/utest.h(164,7): message : expanded from macro 'utest_type_printer'
+./ubut/utest.h(65,12): message : expanded from macro 'UTEST_REZ_OUT'
+./ubut/ubut_top.h(362,91): message : expanded from macro '\
+  UBUT_INFO'
+dbj_string_trim_test.c(176,2): warning : data argument not used by format string [-Wformat-extra-args]
+./ubut/utest.h(257,25): message : expanded from macro 'EXPECT_EQ'
+./ubut/utest.h(220,4): message : expanded from macro 'UTEST_EXPECT'
+./ubut/utest.h(164,7): message : expanded from macro 'utest_type_printer'
+./ubut/utest.h(63,30): message : expanded from macro 'UTEST_REZ_OUT'
+dbj_string_trim_test.c(176,2): warning : data argument not used by format string [-Wformat-extra-args]
+./ubut/utest.h(257,25): message : expanded from macro 'EXPECT_EQ'
+./ubut/utest.h(220,4): message : expanded from macro 'UTEST_EXPECT'
+./ubut/utest.h(164,7): message : expanded from macro 'utest_type_printer'
+./ubut/utest.h(65,12): message : expanded from macro 'UTEST_REZ_OUT'
+./ubut/ubut_top.h(362,91): message : expanded from macro '\
+  UBUT_INFO'
+lld-link : error : undefined symbol: dbj_chr_rng_assign
   >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_chr_rng_test.c:13
   >>>               x64\Debug\dbj_chr_rng_test.obj:(utest_run_core_tests_dbj_char_range)
   >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_chr_rng_test.c:17
@@ -28,12 +52,3 @@ lld-link : error : undefined symbol: dbj_chr_rng_free
   >>>               x64\Debug\dbj_chr_rng_test.obj:(utest_run_core_tests_dbj_char_range)
   >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_chr_rng_test.c:27
   >>>               x64\Debug\dbj_chr_rng_test.obj:(utest_run_core_tests_dbj_char_range)
-  
-lld-link : error : undefined symbol: DBJ_ASSERT
-  >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_string_list_test.c:22
-  >>>               x64\Debug\dbj_string_list_test.obj:(worker)
-  >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_string_list_test.c:28
-  >>>               x64\Debug\dbj_string_list_test.obj:(worker)
-  >>> referenced by D:\DEVL\GITHUB\dbj.systems\dbjclib_sampling\dbj_string_trim_test.c:31
-  >>>               x64\Debug\dbj_string_trim_test.obj:(trim_proc)
-  >>> referenced 1 more times
