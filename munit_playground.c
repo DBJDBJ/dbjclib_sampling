@@ -1,9 +1,9 @@
 #include <assert.h>
 #include <string.h>
 
-#include "munit/munit.h"
-#include "../dbjclib_core.h"
-#include "../valstat_interop.h"
+#include "ubut/utest.h"
+#include "dbjclib/dbjclib_core.h"
+#include "dbjclib/valstat_interop.h"
 
 /* https://rosettacode.org/wiki/Levenshtein_distance#C.2B.2B */
 /* s, t: two strings; ls, lt: their respective length */
@@ -39,28 +39,21 @@ int levenshtein(const char* s, int ls, const char* t, int lt)
 	return a + 1;
 }
 
-MunitResult munit_playground(const MunitParameter p[], void* d)
+UTEST(core_tests, playground)
 {
-	DBJ_UNUSED(p);
-	DBJ_UNUSED(d);
 
 #define call_lvstn(a,b) (levenshtein(a, strlen(a), b, strlen(b)) )
 
-	munit_assert_true(call_lvstn("ISLANDER", "SLANDER") == 1);
-	munit_assert_true(call_lvstn("MART", "KARMA") == 3);
-	munit_assert_true(call_lvstn("KITTEN", "SITTING") == 3);
-	munit_assert_true(call_lvstn("INTENTION", "EXECUTION") == 5);
+	ASSERT_TRUE(call_lvstn("ISLANDER", "SLANDER") == 1);
+	ASSERT_TRUE(call_lvstn("MART", "KARMA") == 3);
+	ASSERT_TRUE(call_lvstn("KITTEN", "SITTING") == 3);
+	ASSERT_TRUE(call_lvstn("INTENTION", "EXECUTION") == 5);
 
 #undef call_lvstn
-
-	return MUNIT_OK;
 }
 
-MunitResult stack_allocated_matrix(const MunitParameter p[], void* d)
+UTEST(core_tests, matrix_whatever)
 {
-	DBJ_UNUSED(p);
-	DBJ_UNUSED(d);
-
 	/*
 	height: 3
 		  0 1 2  --> width: 3
@@ -83,14 +76,8 @@ MunitResult stack_allocated_matrix(const MunitParameter p[], void* d)
 
 	k = 2;	m[k][0] = 5;	m[k][1] = 6;	//m[k][2] = 'J';
 
-	return MUNIT_OK;
-}
 
-MunitTest playground_tests[] = {
-	DBJ_MUNIT_TEST_ADD("/basic", munit_playground),
-	DBJ_MUNIT_TEST_ADD("/stack alloc", stack_allocated_matrix),
-	DBJ_MUNIT_TEST_EOL
-};
+}
 
 #ifdef __clang__
 #pragma clang diagnostic push

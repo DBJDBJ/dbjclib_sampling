@@ -1,6 +1,6 @@
 /* µnit is MIT-licensed */
-#include "../valstat_interop.h"
-#include "munit/munit.h"
+#include "dbjclib/valstat_interop.h"
+#include "ubut/utest.h"
 
 // VALSTAT used is: valstat_uint64_t
 // here we declare and define it
@@ -30,22 +30,16 @@ divider(uint64_t dividend, uint64_t divisor)
 	return valstat_ok(valstat_uint64_t, divider_rezult_);
 }
 
-MunitResult
-dbj_valstat_test(const MunitParameter params[], void* data)
+UTEST(dbjclib, dbj_valstat_test)
 {
-	(void)params;
-	(void)data;
-
 	valstat_uint64_t rez1 = divider(4, 2);
 
-	munit_assert_true(is_valstat_ok(rez1));
-	munit_assert_int64(2, == , *rez1.val);
+	ASSERT_TRUE(is_valstat_ok(rez1));
+	EXPECT_EQ(2, *rez1.val);
 
 	valstat_uint64_t rez2 = divider(4, 0);
 
-	munit_assert_true(is_valstat_error(rez2));
-	munit_assert_not_null(rez2.stat);
-	munit_logf(MUNIT_LOG_DEBUG, "%s", rez2.stat);
-
-	return MUNIT_OK;
+	ASSERT_TRUE(is_valstat_error(rez2));
+	EXPECT_FALSE(rez2.stat);
+	UBUT_TRACE("%s", rez2.stat);
 }

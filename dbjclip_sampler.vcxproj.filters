@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dbjclib_test_main.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="dbj_chr_rng_test.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -36,16 +33,8 @@
     <ClCompile Include="valstat_sample_and_test.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="munit\munit.c">
+    <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="munit\sampling\example.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="munit\munit.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
