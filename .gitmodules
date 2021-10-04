@@ -1,3 +1,6 @@
 [submodule "dbjclib"]
 	path = dbjclib
 	url = https://github.com/dbj-systems/dbjclib.git
+[submodule "ubut"]
+	path = ubut
+	url = https://github.com/dbj-data/ubut.git
