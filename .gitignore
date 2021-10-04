@@ -1,5 +1,6 @@
-/.vs
-/Debug
+.vs/
+Debug/
+Relase/
 /x64
 *.filters
 *.user
